@@ -12,6 +12,6 @@ export interface AddProductOutputDto {
     description: string;
     purchasePrice: number;
     stock: number;
-    createAt: Date;
-    updateAt: Date;
+    createdAt: Date;
+    updatedAt: Date;
 }

@@ -30,8 +30,8 @@ export default class AddProductUseCase {
             description: product.description,
             purchasePrice: product.purchasePrice,
             stock: product.stock,
-            createAt: product.createAt,
-            updateAt: product.updateAt,
+            createdAt: product.createdAt,
+            updatedAt: product.updatedAt,
         };
         // adicionar em: banco, api, txt...
     }
