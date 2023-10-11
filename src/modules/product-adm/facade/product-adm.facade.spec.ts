@@ -8,7 +8,7 @@ import ProductAdmFacadeFactory from '../factory/facade.factory';
 describe("ProductAdmFacade test", () => {
     let sequelize: Sequelize;
     beforeEach(async() => {
-        const sequelize = new Sequelize({
+        sequelize = new Sequelize({
             dialect: "sqlite",
             storage: ":memory:",
             logging: false,
