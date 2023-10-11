@@ -23,7 +23,7 @@ export default class ProductAdmFacade implements ProductAdmFacadeInterface {
         return this._addUsecase.execute(input);
     }
     checkStock(input: CheckStockFacadeInputDto): Promise<CheckStockFacadeOutputDto> {
-        throw new Error("Method not implemented.");
+        return this._checkStockUsecase.execute(input);
     }
 
 }
