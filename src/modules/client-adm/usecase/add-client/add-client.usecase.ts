@@ -1,13 +1,13 @@
-import Id from "../../@shared/domain/value-object/id.value-object";
-import Client from "../domain/client.entity";
-import ClientGateway from "../gateway/client.gateway";
+import Id from "../../../@shared/domain/value-object/id.value-object";
+import Client from "../../domain/client.entity";
+import ClientGateway from "../../gateway/client.gateway";
 import { AddClientInputDto, AddClientOutputDto } from "./add-client.usecase.dto";
 
 export default class AddClientUseCase {
-    private _clientRepositopry: ClientGateway;
+    private _clientRepository: ClientGateway;
 
     constructor(clienteRepository: ClientGateway) {
-        this._clientRepositopry = clienteRepository;
+        this._clientRepository = clienteRepository;
     }
 
     async execute(input: AddClientInputDto): Promise<AddClientOutputDto> {
@@ -19,7 +19,7 @@ export default class AddClientUseCase {
         };
 
         const client = new Client(props);
-        this._clientRepositopry.add(client);
+        this._clientRepository.add(client);
 
         return {
             id: client.id.id,
