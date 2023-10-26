@@ -5,7 +5,7 @@ import Address from '../../../@shared/domain/value-object/address.value-object';
 import Invoice from '../../domain/invoice.entity';
 import InvoiceItems from '../../domain/invoice-items.entity';
 
-export default class GenerateInvoice {
+export default class GenerateInvoiceUseCase {
     private _invoiceRepository: InvoiceGateway;
 
     constructor(invoiceRepository: InvoiceGateway) {
